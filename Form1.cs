@@ -20,6 +20,7 @@ namespace Kalkulator
 			
 		}
 		double result, firstNumber, secondNumber;
+		int time;
 
 		private void b_0_Click(object sender, EventArgs e)
 		{
@@ -133,15 +134,11 @@ namespace Kalkulator
 			else if (radioButton_l2.Checked) textBox_l2.Text += ",";
 		}
 
-			int time;
-			private void timer1_Tick(object sender, EventArgs e)
-			{
-			
+		private void timer1_Tick(object sender, EventArgs e)
+		{
 			time++;
 			toolStripStatusLabel1.Text = ("Czas działania programu: " + time + " sekund");
-
 		}
-
 
 
 		private void setDefault_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,24 +173,22 @@ namespace Kalkulator
 
 			if (radioButton_add.Checked)
 			{
-					
-
 				result = firstNumber + secondNumber;		
 				listView1.Items.Add(new ListViewItem(new[] {  firstNumber + "+" + secondNumber + "=" + result}));
 			}
+
 			if (radioButton_sub.Checked)
 			{
-				
 				result = firstNumber - secondNumber;
 				listView1.Items.Add(new ListViewItem(new[] { firstNumber + "-" + secondNumber + "=" + result }));
 			}
+
 			if (radioButton_mul.Checked)
-			{
-				
+			{	
 				result = firstNumber * secondNumber;
 				listView1.Items.Add(new ListViewItem(new[] { firstNumber + "*" + secondNumber + "=" + result }));
-
 			}
+
 			if (radioButton_div.Checked)
 			{
 				if (secondNumber == 0)
@@ -205,7 +200,6 @@ namespace Kalkulator
 					result = firstNumber / secondNumber;
 					listView1.Items.Add(new ListViewItem(new[] { firstNumber + "/" + secondNumber + "=" + result }));
 				}
-
 			}
 			
 			if (radioButton_mod.Checked)
@@ -213,12 +207,10 @@ namespace Kalkulator
 
 				result = firstNumber % secondNumber;
 				listView1.Items.Add(new ListViewItem(new[] { firstNumber + "%" + secondNumber + "=" + result }));
-
-
 			}
+
 			if (radioButton_sqr.Checked)
 			{
-
 				if (radioButton_l1.Checked)
 				{
 					result = firstNumber * firstNumber;
@@ -229,9 +221,8 @@ namespace Kalkulator
 					result = secondNumber * secondNumber;
 					listView1.Items.Add(new ListViewItem(new[] { secondNumber + "^2" + "=" + result }));
 				}
-
-
 			}
+
 			if (radioButton_sqrt.Checked)
 			{
 				if (radioButton_l1.Checked)
@@ -245,9 +236,8 @@ namespace Kalkulator
 					result = Math.Sqrt(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sqrt(" + secondNumber + ")" + "=" + result }));
 				}
-				
-
 			}
+
 			if (radioButton_cos.Checked)
 			{
 				if (radioButton_l1.Checked)
@@ -260,10 +250,8 @@ namespace Kalkulator
 					result = Math.Cos(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "cos(" + secondNumber + ")" + "=" + result }));
 				}
+			}
 
-
-
-				}
 			if (radioButton_sin.Checked)
 			{
 				if (radioButton_l1.Checked)
@@ -276,9 +264,8 @@ namespace Kalkulator
 					result = Math.Sin(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sin(" + secondNumber + ")" + "=" + result }));
 				}
-
-
 			}
+
 			if (radioButton_div.Checked && secondNumber == 0)
 			{
 				textBox_result.Text = "BŁĄD";
@@ -287,9 +274,6 @@ namespace Kalkulator
 			{
 				textBox_result.Text = Convert.ToString(result);
 			}
-		}
-
-		
-		
+		}	
 	}
 }
