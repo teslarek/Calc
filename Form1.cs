@@ -23,62 +23,62 @@ namespace Kalkulator
 
 		private void b_0_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "0";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "0";
+			if (radioButton_l1.Checked) textBox_l1.Text += "0";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "0";
 		}
 
 		private void b_1_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "1";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "1";
+			if (radioButton_l1.Checked) textBox_l1.Text += "1";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "1";
 		}
 
 		private void b_2_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "2";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "2";
+			if (radioButton_l1.Checked) textBox_l1.Text += "2";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "2";
 		}
 
 		private void b_3_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "3";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "3";
+			if (radioButton_l1.Checked) textBox_l1.Text += "3";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "3";
 		}
 
 		private void b_4_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "4";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "4";
+			if (radioButton_l1.Checked) textBox_l1.Text += "4";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "4";
 		}
 
 		private void b_5_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "5";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "5";
+			if (radioButton_l1.Checked) textBox_l1.Text += "5";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "5";
 		}
 
 		private void b_6_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "6";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "6";
+			if (radioButton_l1.Checked) textBox_l1.Text += "6";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "6";
 		}
 
 		private void b_7_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "7";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "7";
+			if (radioButton_l1.Checked) textBox_l1.Text += "7";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "7";
 		}
 
 		private void b_8_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "8";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "8";
+			if (radioButton_l1.Checked) textBox_l1.Text += "8";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "8";
 		}
 
 		private void b_9_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += "9";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += "9";
+			if (radioButton_l1.Checked) textBox_l1.Text += "9";
+			else if (radioButton_l2.Checked) textBox_l2.Text += "9";
 		}
 
 		private void b_mod_Click(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace Kalkulator
 
 		private void b_dot_Click(object sender, EventArgs e)
 		{
-			if (radioButton_liczba1.Checked) textBox_l1.Text += ",";
-			else if (radioButton_liczba2.Checked) textBox_l2.Text += ",";
+			if (radioButton_l1.Checked) textBox_l1.Text += ",";
+			else if (radioButton_l2.Checked) textBox_l2.Text += ",";
 		}
 
 			int time;
@@ -146,9 +146,12 @@ namespace Kalkulator
 
 		private void setDefault_ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			textBox_l1.Text = "0";
-			textBox_l2.Text = "0";
-			textBox_wynik.Text = "0";
+			textBox_l1.Text = null;
+			textBox_l2.Text = null;
+			textBox_result.Text = null;
+			radioButton_add.Checked = true;
+			radioButton_l1.Checked = true;
+			listView1.Items.Clear();
 		}
 
 		private void quit_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,12 +219,12 @@ namespace Kalkulator
 			if (radioButton_sqr.Checked)
 			{
 
-				if (radioButton_liczba1.Checked)
+				if (radioButton_l1.Checked)
 				{
 					result = firstNumber * firstNumber;
 					listView1.Items.Add(new ListViewItem(new[] { firstNumber +"^2"+  "=" + result }));
 				}
-				else if (radioButton_liczba2.Checked)
+				else if (radioButton_l2.Checked)
 				{
 					result = secondNumber * secondNumber;
 					listView1.Items.Add(new ListViewItem(new[] { secondNumber + "^2" + "=" + result }));
@@ -231,13 +234,13 @@ namespace Kalkulator
 			}
 			if (radioButton_sqrt.Checked)
 			{
-				if (radioButton_liczba1.Checked)
+				if (radioButton_l1.Checked)
 				{
 					result = Math.Sqrt(firstNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sqrt(" + firstNumber + ")" + "=" + result }));
 
 				}
-				else if (radioButton_liczba2.Checked)
+				else if (radioButton_l2.Checked)
 				{
 					result = Math.Sqrt(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sqrt(" + secondNumber + ")" + "=" + result }));
@@ -247,12 +250,12 @@ namespace Kalkulator
 			}
 			if (radioButton_cos.Checked)
 			{
-				if (radioButton_liczba1.Checked)
+				if (radioButton_l1.Checked)
 				{
 					result = Math.Cos(firstNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "cos(" + firstNumber + ")" + "=" + result }));
 				}
-				else if (radioButton_liczba2.Checked)
+				else if (radioButton_l2.Checked)
 				{
 					result = Math.Cos(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "cos(" + secondNumber + ")" + "=" + result }));
@@ -263,12 +266,12 @@ namespace Kalkulator
 				}
 			if (radioButton_sin.Checked)
 			{
-				if (radioButton_liczba1.Checked)
+				if (radioButton_l1.Checked)
 				{
 					result = Math.Sin(firstNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sin(" + firstNumber + ")" + "=" + result }));
 				}
-				else if(radioButton_liczba2.Checked)
+				else if(radioButton_l2.Checked)
 				{
 					result = Math.Sin(secondNumber);
 					listView1.Items.Add(new ListViewItem(new[] { "sin(" + secondNumber + ")" + "=" + result }));
@@ -278,11 +281,11 @@ namespace Kalkulator
 			}
 			if (radioButton_div.Checked && secondNumber == 0)
 			{
-				textBox_wynik.Text = "BŁĄD";
+				textBox_result.Text = "BŁĄD";
 			}
 			else
 			{
-				textBox_wynik.Text = Convert.ToString(result);
+				textBox_result.Text = Convert.ToString(result);
 			}
 		}
 

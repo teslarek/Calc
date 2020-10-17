@@ -30,12 +30,12 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.textBox_wynik = new System.Windows.Forms.TextBox();
+			this.textBox_result = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox_l2 = new System.Windows.Forms.TextBox();
 			this.textBox_l1 = new System.Windows.Forms.TextBox();
-			this.radioButton_liczba2 = new System.Windows.Forms.RadioButton();
-			this.radioButton_liczba1 = new System.Windows.Forms.RadioButton();
+			this.radioButton_l2 = new System.Windows.Forms.RadioButton();
+			this.radioButton_l1 = new System.Windows.Forms.RadioButton();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.radioButton_add = new System.Windows.Forms.RadioButton();
 			this.radioButton_sub = new System.Windows.Forms.RadioButton();
@@ -86,12 +86,12 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.textBox_wynik);
+			this.groupBox1.Controls.Add(this.textBox_result);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.textBox_l2);
 			this.groupBox1.Controls.Add(this.textBox_l1);
-			this.groupBox1.Controls.Add(this.radioButton_liczba2);
-			this.groupBox1.Controls.Add(this.radioButton_liczba1);
+			this.groupBox1.Controls.Add(this.radioButton_l2);
+			this.groupBox1.Controls.Add(this.radioButton_l1);
 			this.groupBox1.Location = new System.Drawing.Point(12, 27);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -99,12 +99,13 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Dane i wynik";
 			// 
-			// textBox_wynik
+			// textBox_result
 			// 
-			this.textBox_wynik.Location = new System.Drawing.Point(79, 69);
-			this.textBox_wynik.Name = "textBox_wynik";
-			this.textBox_wynik.Size = new System.Drawing.Size(100, 20);
-			this.textBox_wynik.TabIndex = 5;
+			this.textBox_result.Location = new System.Drawing.Point(79, 69);
+			this.textBox_result.Name = "textBox_result";
+			this.textBox_result.ReadOnly = true;
+			this.textBox_result.Size = new System.Drawing.Size(100, 20);
+			this.textBox_result.TabIndex = 5;
 			// 
 			// label1
 			// 
@@ -129,27 +130,27 @@
 			this.textBox_l1.Size = new System.Drawing.Size(100, 20);
 			this.textBox_l1.TabIndex = 2;
 			// 
-			// radioButton_liczba2
+			// radioButton_l2
 			// 
-			this.radioButton_liczba2.AutoSize = true;
-			this.radioButton_liczba2.Location = new System.Drawing.Point(3, 39);
-			this.radioButton_liczba2.Name = "radioButton_liczba2";
-			this.radioButton_liczba2.Size = new System.Drawing.Size(58, 17);
-			this.radioButton_liczba2.TabIndex = 1;
-			this.radioButton_liczba2.Text = "liczba2";
-			this.radioButton_liczba2.UseVisualStyleBackColor = true;
+			this.radioButton_l2.AutoSize = true;
+			this.radioButton_l2.Location = new System.Drawing.Point(3, 39);
+			this.radioButton_l2.Name = "radioButton_l2";
+			this.radioButton_l2.Size = new System.Drawing.Size(58, 17);
+			this.radioButton_l2.TabIndex = 1;
+			this.radioButton_l2.Text = "liczba2";
+			this.radioButton_l2.UseVisualStyleBackColor = true;
 			// 
-			// radioButton_liczba1
+			// radioButton_l1
 			// 
-			this.radioButton_liczba1.AutoSize = true;
-			this.radioButton_liczba1.Checked = true;
-			this.radioButton_liczba1.Location = new System.Drawing.Point(3, 16);
-			this.radioButton_liczba1.Name = "radioButton_liczba1";
-			this.radioButton_liczba1.Size = new System.Drawing.Size(58, 17);
-			this.radioButton_liczba1.TabIndex = 0;
-			this.radioButton_liczba1.TabStop = true;
-			this.radioButton_liczba1.Text = "liczba1";
-			this.radioButton_liczba1.UseVisualStyleBackColor = true;
+			this.radioButton_l1.AutoSize = true;
+			this.radioButton_l1.Checked = true;
+			this.radioButton_l1.Location = new System.Drawing.Point(3, 16);
+			this.radioButton_l1.Name = "radioButton_l1";
+			this.radioButton_l1.Size = new System.Drawing.Size(58, 17);
+			this.radioButton_l1.TabIndex = 0;
+			this.radioButton_l1.TabStop = true;
+			this.radioButton_l1.Text = "liczba1";
+			this.radioButton_l1.UseVisualStyleBackColor = true;
 			// 
 			// groupBox2
 			// 
@@ -615,12 +616,12 @@
 
 		#endregion
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.TextBox textBox_wynik;
+		private System.Windows.Forms.TextBox textBox_result;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textBox_l2;
 		private System.Windows.Forms.TextBox textBox_l1;
-		private System.Windows.Forms.RadioButton radioButton_liczba2;
-		private System.Windows.Forms.RadioButton radioButton_liczba1;
+		private System.Windows.Forms.RadioButton radioButton_l2;
+		private System.Windows.Forms.RadioButton radioButton_l1;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.RadioButton radioButton_mod;
 		private System.Windows.Forms.RadioButton radioButton_sqr;
